@@ -1,0 +1,47 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        <p>Hello form Index View</p>
+    </div>
+    <div>
+        @DateTime.Now
+    </div>
+    <div>
+        @(5-3)
+    </div>
+    @{ 
+        var a = 2;
+        var b = 3;
+        var c = a + b;
+        var currentTime = DateTime.Now;
+        var tomorrowTime = DateTime.Now.AddDays(1);
+        var colorList = new List<string>() { "Red", "Green" };
+
+    }
+<div>
+    <label>@c</label><br />
+    <label>Current Time - @currentTime</label><br />
+    <label>Tommorow Time -@tomorrowTime</label><br />
+    <label>@colorList.FirstOrDefault()</label>
+</div>
+    <div>
+        zishan.tasnim@gmail.com
+    </div>
+    <div>
+        <label>my twitter account -@@zishan_tasnim</label>
+    </div>
+        
+
+</body>
+</html>

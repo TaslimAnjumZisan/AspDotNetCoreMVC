@@ -1,0 +1,66 @@
+﻿@using RezorViewEngine4.Models
+@model RezorViewEngine4.Models.Employee
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    @{
+        bool isTrue = true;
+        int myVar = 5;
+    }
+    <div>
+        @if (isTrue)
+        {
+            <h1>Hello!!! I am from if block</h1>
+        }<hr />
+        @if (myVar == 1)
+        {
+            <h1>Hey!!! I am from if block 1</h1>
+        }
+        else if (myVar == 2)
+        {
+            <h1>Hey!!! I am from if block 2</h1>
+        }
+        else if (myVar == 3)
+        {
+            <h1>Hey!!! I am from if block 3</h1>
+        }
+        else
+        {
+            <h1>Hey I am from else part</h1>
+
+        }
+    </div>
+    <div>
+        @(myVar==3?"condition is true":"Condition is false")
+    </div>
+    <div>
+        @{
+            var myList = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            <text> var myList = new List<int>
+                    (){1,2,3,4,5,6,7,8,};</text>
+            Employee emp = new Employee() { Id = 1, Name = "Zishan" };
+
+        }
+</div>
+<div>
+    Id- @emp.Id</br>
+    Name- @emp.Name
+</div>
+<div>
+    @foreach (var obj in myList)
+    {
+        <h1> My value is =@obj</h1><br />
+    }
+</div>
+
+</body>
+</html>
